@@ -35,7 +35,7 @@
 | Spec | Details |
 | :--- | :--- |
 | **Application ID** | `com.aistudio.dinkbracket.pkbtmz` |
-| **Current Version** | `v1.3.3` (`versionCode 10`) |
+| **Current Version** | [![Latest Release](https://img.shields.io/github/v/release/nekofied143/Tournament-Create?label=Latest&color=0284C7)](https://github.com/nekofied143/Tournament-Create/releases/latest) |
 | **Supported Android** | Android 7.0 (`minSdk 24`) – Android 16 (`targetSdk 36`) |
 | **Game Modes** | Mobile Legends: Bang Bang (5v5) & Pickleball |
 | **Distribution** | [GitHub Releases (`nekofied143/Tournament-Create`)](https://github.com/nekofied143/Tournament-Create/releases) |
