@@ -32,14 +32,15 @@
 
 ## Features
 
-### 1. Dual-Mode Tournament Engine
+### 1. Dual-Mode Tournament Engine & Global Settings Toggle
+- **Global Sport Mode & Rules** (`AppSettingsRepository` & `GlobalSettingsDialog`): One-tap global switch between **Pickleball** and **MLBB 5v5** from the Hub or Workspace, updating UI labels (`Courts`/`Lobbies`, `teams`/`squads`), Hub event filters, new-event presets, and active tournament/live scoring rules.
 - **Mobile Legends: Bang Bang (5v5)**
   - Team registration with **Team Name**, **Tag**, **Captain**, and **4 Teammates** (full 5-player roster) plus duplicate IGN/conflict checks.
   - Per-match **Blue Side / Red Side** selector, **1st Pick** slot indicator, and **Custom Lobby ID / Password** tracking.
-  - Configurable **BO1 / BO3 / BO5 / BO7** series per round and per match.
+  - Configurable **Base Win / Kill Target (15 or 25)** and **BO1 / BO3 / BO5 / BO7** series per round and per match.
   - Dedicated tournament lobbies (`Lb 1`, `Lb 2`, ...) with 40-minute default scheduling intervals.
 - **Pickleball**
-  - Singles and Doubles support with configurable **Points to Win** (e.g., 11, 15, 21), **Win by 2**, and **BO1–BO7** game series.
+  - Singles and Doubles support with configurable **Points to Win** (11, 15, 21), **Win by 2**, and **BO1–BO7** game series.
   - Built-in **Player Shuffler** (`PlayerShufflerDialog`) to randomize checked-in players into paired teams.
   - Automated court assignment (`Ct 1`, `Ct 2`, ...) with 25-minute default scheduling intervals.
 
@@ -52,9 +53,9 @@
 - **One-Tap Sample Tournaments:** Instant MLBB 5v5 Double Elimination and Pickleball 8-team sample brackets.
 
 ### 3. Live Scoring, Standings & Exports
-- **Live Scoring Sheet** (`LiveScoringSheet`): Score games/sets in real time, save partial progress, or finalize results to advance brackets automatically.
-- **Standings & Tiebreakers** (`StandingsTab`): Automatic placement labels (`Champion`, rankings, wins/losses, and point/game differentials).
-- **PDF Bracket & Report Export** (`TournamentPdfExporter`): Generates multi-page tournament summary & bracket PDFs via `PdfDocument` for sharing (`FileProvider`) or saving via Storage Access Framework.
+- **Live Scoring & One-Tap MLBB Lobby Copy** (`LiveScoringSheet` & `MatchLobbyFormatter`): Score games/sets in real time, advance brackets automatically, and copy Blue/Red side + 1st Pick + Custom Lobby credentials in one tap.
+- **Pool Play → Playoffs & Check-In Enforcement**: Advance Top `N` Round Robin standings into a newly seeded Single or Double Elimination bracket, import rosters in bulk from CSV/spreadsheets, and optionally restrict bracket generation to checked-in teams.
+- **PDF Report & Visual Bracket Tree Export** (`TournamentPdfExporter`): Generates portrait standings/schedule reports plus landscape visual bracket diagrams with orthogonal connector lines via `PdfDocument`.
 - **JSON Backup & Restore** (`TournamentBackupCodec`): Exports and restores complete tournaments, 5v5 rosters, matches, and scores cleanly in portable `.json` files.
 
 ### 4. Adaptive Phone, Tablet & Landscape UI
